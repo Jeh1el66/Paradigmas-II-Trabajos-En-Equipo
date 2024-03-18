@@ -1,4 +1,3 @@
-package com.mycompany.tareaciudades;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,7 +15,7 @@ public class TareaCiudades {
             loadCSVData(filePath, cityTemperatures);
         } catch (IOException e) {
             System.err.println("Error al cargar el archivo CSV: " + e.getMessage());
-            return; // Termina la ejecución del programa si hay un error
+            return;
         }
 
         boolean running = true;
@@ -55,7 +54,6 @@ public class TareaCiudades {
                 throw new IOException("El archivo CSV está vacío");
             }
 
-            // Saltar las primeras dos líneas
             if (scanner.hasNextLine()) scanner.nextLine();
             if (scanner.hasNextLine()) scanner.nextLine();
 
